@@ -1,6 +1,11 @@
-# Welcome to Streamlit!
+# 📦 Dashboard (`version 2`)
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire. :heart:
+This is a dashboard app created in Python using Streamlit.
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+## Demo App
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dash-board.streamlitapp.com/)
+
+## YouTube Tutorial
+
+<a href="https://youtu.be/o6wQ8zAkLxc"><img src="https://img.youtube.com/vi/o6wQ8zAkLxc/maxresdefault.jpg" alt="Building a Dashboard web app in Python - Full Streamlit Tutorial" title="Building a Dashboard web app in Python - Full Streamlit Tutorial" width="450"/></a>
