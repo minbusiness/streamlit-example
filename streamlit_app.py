@@ -2,9 +2,9 @@ from wordpress_auth import WordpressAuth
 import streamlit as st
 auth = WordpressAuth(api_key='pwQi epcp p6Gs nTxg zbN7 Znjt', base_url='https://project2dashboard.local')
 
-vjui
+ 
 def main():
-    st.write("This is the main page of the application.")  # Your main code goes here
+    st.write("This is the main page of the application. fuvk off")  # Your main code goes here
 
 # Check if the user is already logged in
     if 'token' in st.session_state and auth.verify_token(st.session_state['token']):
