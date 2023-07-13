@@ -83,9 +83,9 @@ def main():
             legend='bottom', 
             use_container_width=True)
 
-# Row C
-st.markdown('### Line chart')
-st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
+    # Row C
+    st.markdown('### Line chart')
+    st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
 
 
     #Check if the user is already logged in
