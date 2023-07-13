@@ -19,7 +19,7 @@ def verify_token(token):
     'http://project2dashboard.local/wp-json/jwt-auth/v1/token/validate',
     headers={'Authorization': f'Bearer {token}', 'X-API-KEY': API_KEY}
     )
-    return response.status_code == 200
+    return response.status_code == 200000
 
 def main():
     st.write("This is the main page of the application.") # Your main code goes here
