@@ -31,26 +31,26 @@ def main():
     else:
 # Show the login form
         col1, col2, col3 = st.columns([1,1,1])
-with col1:
-    st.write("")
+    with col1:
+        st.write("")
 
-with col2:
-    with st.form(key='login_form'):
-        st.title("Please log in")
-        username = st.text_input('Username')
-        password = st.text_input('Password', type='password')
-        submit_button = st.form_submit_button(label='Log in')
+    with col2:
+        with st.form(key='login_form'):
+            st.title("Please log in")
+            username = st.text_input('Username')
+            password = st.text_input('Password', type='password')
+            submit_button = st.form_submit_button(label='Log in')
+    
+            if submit_button:
+                token = get_token(username, password)
+                if token and verify_token(token):
+                    st.session_state['token'] = token  # We store the token in the session state
+                    st.experimental_rerun()  # Reload the page so that the login form disappears
+                else:
+                    st.error('Access denied')
 
-        if submit_button:
-            token = get_token(username, password)
-            if token and verify_token(token):
-                st.session_state['token'] = token  # We store the token in the session state
-                st.experimental_rerun()  # Reload the page so that the login form disappears
-            else:
-                st.error('Access denied')
-
-with col3:
-    st.write("")
+    with col3:
+        st.write("")
 
 
 
