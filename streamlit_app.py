@@ -6,7 +6,6 @@ import requests
 API_KEY = 'pwQi epcp p6Gs nTxg zbN7 Znjt' # Set your API key here
 
 #st.set_page_config(layout="wide")
-st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 def get_token(username, password):
     response = requests.post( 'http://project2dashboard.local/wp-json/jwt-auth/v1/token', data={'username': username, 'password': password}, headers={'X-API-KEY': API_KEY}
 )
@@ -28,7 +27,8 @@ def main():
     
 
 
-    
+    st.set_page_config(layout='wide', initial_sidebar_state='expanded')
+
     with open('style.css') as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
         
