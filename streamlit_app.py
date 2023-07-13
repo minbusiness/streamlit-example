@@ -11,9 +11,9 @@ def get_token(username, password):
     response = requests.post( 'http://project2dashboard.local/wp-json/jwt-auth/v1/token', data={'username': username, 'password': password}, headers={'X-API-KEY': API_KEY}
 )
     if response.status_code == 200:
-    return response.json()['token']
+        return response.json()['token']
     else:
-    return None
+        return None
 
 def verify_token(token):
     response = requests.post(
