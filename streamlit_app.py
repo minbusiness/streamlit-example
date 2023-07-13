@@ -8,30 +8,26 @@ API_KEY = 'wqm4 WmNq 2snl ovAC fpvS Rmzj' # Set your API key here
 st.set_page_config(layout="wide")
 
 def get_token(username, password):
-response = requests.post(
-'http://project2dashboard.local/wp-json/jwt-auth/v1/token',
-data={'username': username, 'password': password},
-headers={'X-API-KEY': API_KEY}
+    response = requests.post( 'http://project2dashboard.local/wp-json/jwt-auth/v1/token', data={'username': username, 'password': password}, headers={'X-API-KEY': API_KEY}
 )
-if response.status_code == 200:
-return response.json()['token']
-else:
-return None
+    if response.status_code == 200:
+    return response.json()['token']
+    else:
+    return None
 
 def verify_token(token):
-response = requests.post(
-'http://project2dashboard.local/wp-json/jwt-auth/v1/token/validate',
-headers={'Authorization': f'Bearer {token}', 'X-API-KEY': API_KEY}
-)
-return response.status_code == 200
+    response = requests.post(
+    'http://project2dashboard.local/wp-json/jwt-auth/v1/token/validate',
+    headers={'Authorization': f'Bearer {token}', 'X-API-KEY': API_KEY}
+    )
+    return response.status_code == 200
 
 def main():
-st.write("This is the main page of the application.") # Your main code goes here
+    st.write("This is the main page of the application.") # Your main code goes here
 
-Check if the user is already logged in
-if 'token' in st.session_state and verify_token(st.session_state['token']):
-main() # Call the main function
-else:
+    Check if the user is already logged in if 'token' in st.session_state and verify_token(st.session_state['token']):
+    main() # Call the main function
+    else:
 # Show the login form
 col1, col2, col3 = st.columns([1,1,1])
 with col1:
