@@ -3,7 +3,7 @@ import pandas as pd
 import plost
 import requests
 
-API_KEY = 'pwQi epcp p6Gs nTxg zbN7 Znjt' # Set your API key here
+API_KEY = 'pwQi epcp p6Gs nTxg zbN7 Znjtmin' # Set your API key here
 
 #st.set_page_config(layout="wide")
 
