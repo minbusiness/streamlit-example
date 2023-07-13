@@ -1,5 +1,5 @@
 from wordpress_auth import WordpressAuth
-
+import streamlit as st
 auth = WordpressAuth(api_key='pwQi epcp p6Gs nTxg zbN7 Znjt', base_url='http://project2dashboard.local')
 
 
