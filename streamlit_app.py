@@ -25,11 +25,12 @@ def verify_token(token):
 def main():
     st.write("This is the main page of the application.") # Your main code goes here
 
-    Check if the user is already logged in if 'token' in st.session_state and verify_token(st.session_state['token']):
-    main() # Call the main function
+    #Check if the user is already logged in
+    if 'token' in st.session_state and verify_token(st.session_state['token']):
+        main() # Call the main function
     else:
 # Show the login form
-col1, col2, col3 = st.columns([1,1,1])
+        col1, col2, col3 = st.columns([1,1,1])
 with col1:
     st.write("")
 
