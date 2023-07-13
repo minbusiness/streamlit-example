@@ -1,6 +1,6 @@
 from wordpress_auth import WordpressAuth
 import streamlit as st
-auth = WordpressAuth(api_key='minmyomin', base_url='https://project2dashboard.local')
+auth = WordpressAuth(api_key='avXWyvfsPxCQDKBLFliYOrMivhrHEveY', base_url='https://project2dashboard.local')
 
  
 def main():
